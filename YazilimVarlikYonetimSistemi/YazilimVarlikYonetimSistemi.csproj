@@ -695,9 +695,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InfrastructureController.cs" />
     <Compile Include="Controllers\SoftwareInfoController.cs" />
+    <Compile Include="Controllers\UsageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -725,6 +727,11 @@
     <Content Include="Views\Infrastructure\Index.cshtml" />
     <Content Include="Views\Infrastructure\InfraForm.cshtml" />
     <Content Include="Views\SoftwareInfo\Info.cshtml" />
+    <Content Include="Views\Usage\Index.cshtml" />
+    <Content Include="Views\Usage\UsageForm.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
+    <Content Include="Views\Department\Info.cshtml" />
+    <Content Include="Views\Department\DepartForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

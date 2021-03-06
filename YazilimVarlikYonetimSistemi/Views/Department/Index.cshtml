@@ -1,0 +1,32 @@
+﻿@using YazilimVarlikYonetimSistemi.Models.Model
+@model List<Department>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Birim Adı</th>
+            <th>Birim Adresi</th>
+            <th>Birim E-maili</th>
+            <th>Birim Tel No</th>
+            <th>Yazılımlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var infra in Model)
+        {
+            <tr>
+                <td>@infra.D_Name</td>
+                <td>@infra.D_Address</td>
+                <td>@infra.D_Email</td>
+                <td>@infra.D_TelNo</td>
+
+                <td><a class="btn btn-info" href="/Department/Info/@infra.D_ID">Yazılımlar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

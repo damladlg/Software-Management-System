@@ -46,7 +46,6 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                 //var model = db.Infrastructure.Find(infra.I_ID);
                 db.Entry(infra).State = EntityState.Modified;
                
-
             }
 
             db.SaveChanges();
