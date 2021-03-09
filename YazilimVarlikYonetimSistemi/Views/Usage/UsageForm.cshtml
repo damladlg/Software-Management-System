@@ -11,9 +11,9 @@
         @Html.DropDownListFor(model => model.Software.S_ID, (List<SelectListItem>)ViewBag.values, new { @class = "form-control" })
     </div>
     <div class="form-group">
-            @Html.LabelFor(model => model.Department.D_Name)
-            @Html.DropDownListFor(model => model.Department.D_ID, (List<SelectListItem>)ViewBag.valued, new { @class = "form-control" })
-        </div>
+        @Html.LabelFor(model => model.Department.D_Name)
+        @Html.DropDownListFor(model => model.Department.D_ID, (List<SelectListItem>)ViewBag.valued, new { @class = "form-control" })
+    </div>
     <div class="form-group">
         @Html.LabelFor(model => model.Software_Key)
         @Html.TextBoxFor(model => model.Software_Key, new { @class = "form-control" })
@@ -40,7 +40,6 @@
     </div>
 
     @Html.HiddenFor(model => model.Usage_ID)
-    
     <button type="submit" class="btn btn-default">Kaydet</button>
 }
 

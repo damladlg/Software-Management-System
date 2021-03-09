@@ -34,7 +34,7 @@
             <td>@usage.Acquisition_Date.ToShortDateString()</td>
             <td>@usage.Update_Start_Date.ToShortDateString()</td>
             <td>@usage.Update_Finish_Date.ToShortDateString()</td>
-            <td>@usage.Usage_Time.ToShortDateString()</td>
+            <td>@(usage.ExpiryDate.Day - usage.Acquisition_Date.Day)</td>
             <td>@usage.ExpiryDate.ToShortDateString()</td>
 
             <td><a class="btn btn-primary" href="/Usage/Update/@usage.Usage_ID">Güncelle</a></td>
