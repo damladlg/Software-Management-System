@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="YazilimVarlikYonetimSistemi.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="YazilimVarlikYonetimSistem.MvcApplication" Language="C#" %>

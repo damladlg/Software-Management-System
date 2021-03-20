@@ -39,7 +39,7 @@ namespace YazilimVarlikYonetimSistemi.Models.Model
 
         [Required, StringLength(50, ErrorMessage = "Can be a maximum of 50 characters!")]
         public string S_Version { get; set; }
-        
+
 
         public ICollection<Infrastructure> Infrastructures { get; set; }
 

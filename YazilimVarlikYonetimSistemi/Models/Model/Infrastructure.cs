@@ -26,6 +26,6 @@ namespace YazilimVarlikYonetimSistemi.Models.Model
         public int S_ID { get; set; }
         public Software Software { get; set; }
 
-       
+
     }
 }

@@ -16,7 +16,7 @@ namespace YazilimVarlikYonetimSistemi.Controllers
         // GET: Usage
         public ActionResult Index()
         {
-            var model = db.Usage.Include(x => x.Software).Include(a=>a.Department).ToList();
+            var model = db.Usage.Include(x => x.Software).Include(a => a.Department).ToList();
             return View(model);
         }
 
@@ -48,10 +48,10 @@ namespace YazilimVarlikYonetimSistemi.Controllers
             var department = db.Department.Where(x => x.D_ID == usage.Department.D_ID).FirstOrDefault();
             usage.Software = software;
             usage.Department = department;
-            
+
             try
             {
-                if(usage.Usage_ID==0)
+                if (usage.Usage_ID == 0)
                 {
                     SqlParameter param1 = new SqlParameter("@SoftwareKey", usage.Software_Key);
                     SqlParameter param2 = new SqlParameter("@UsageTime", usage.Usage_Time);
@@ -78,9 +78,9 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                     SqlParameter param8 = new SqlParameter("@SID", usage.Software.S_ID);
                     SqlParameter param9 = new SqlParameter("@id", usage.Usage_ID);
                     db.Database.ExecuteSqlCommand("UpdateUsage @id, @SoftwareKey, @UsageTime, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param9, param1, param2, param3, param4, param5, param6, param7, param8);
-                
+
                 }
-               
+
                 return RedirectToAction("Index");
             }
             catch

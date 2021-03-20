@@ -25,7 +25,7 @@
 
 </head>
 <body>
-    <div>
+    @*<div>
         <form class="login-form" method="post" action="/Admin/Login/">
             <div class="login-wrap">
                 @if (Session["adminid"] == null)
@@ -44,6 +44,8 @@
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Giriş Yap</button>
             </div>
         </form>
-    </div>
+    </div>*@
+
+    @Html.Partial("_LoginPartial")
 </body>
 </html>

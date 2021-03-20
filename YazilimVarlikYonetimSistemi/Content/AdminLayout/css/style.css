@@ -10,11 +10,13 @@
 
 @import url(line-icons.css);
 
+
+
 body {
 
     color: #797979;
 
-    background: rgb(204, 204, 204);
+    background: #eeeeee;
 
     font-family: 'Lato', sans-serif;
 
@@ -507,10 +509,15 @@ table tr th { color: #688a7e;}
 
 
 #sidebar {
+
     width: 180px;
+
     height: 100%;
+
     position: fixed;
-    background: #2e3b46;
+
+    background: #394a59;
+
 }
 
 
@@ -2066,9 +2073,13 @@ div[data-role="editor-toolbar"] {
 }
 
 .dark-bg {
-    color: #2e3b46;
-    background: #2e3b46;
-    background-color: #2e3b46;
+
+  color : #fff;
+
+  background : #1a2732;
+
+  background-color : #1a2732;
+
 }
 
 .facebook-bg {

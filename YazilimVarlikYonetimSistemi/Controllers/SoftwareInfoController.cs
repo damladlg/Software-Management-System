@@ -92,7 +92,7 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                 return View();
             }
         }
-        
+
 
         public ActionResult Delete(int id)
         {
@@ -112,7 +112,7 @@ namespace YazilimVarlikYonetimSistemi.Controllers
             {
                 return View();
             }
-           
+
         }
 
 

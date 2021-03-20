@@ -1,4 +1,4 @@
-namespace YazilimVarlikYonetimSistemi.Migrations
+namespace YazilimVarlikYonetimSistem.Migrations
 {
     using System;
     using System.Data.Entity;
