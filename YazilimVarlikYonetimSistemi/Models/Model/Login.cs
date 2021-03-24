@@ -17,6 +17,6 @@ namespace YazilimVarlikYonetimSistemi.Models.Model
         public string L_Email { get; set; }
 
         [Required, StringLength(100, ErrorMessage = "Can be a maximum of 100 characters!")]
-        public string L_Password { get; set; }
+        public string L_Password { get; set; }        
     }
 }

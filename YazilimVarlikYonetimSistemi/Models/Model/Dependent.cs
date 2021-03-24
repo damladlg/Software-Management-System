@@ -19,7 +19,7 @@ namespace YazilimVarlikYonetimSistemi.Models.Model
 
         public int U_ID { get; set; }
         public User User { get; set; }
-
+        
         public int D_ID { get; set; }
         public Department Department { get; set; }
 

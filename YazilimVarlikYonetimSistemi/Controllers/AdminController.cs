@@ -30,7 +30,7 @@ namespace YazilimVarlikYonetimSistemi.Controllers
         public ActionResult Login(Login _login)
         {
             var login = db.Login.Where(x => x.L_Email == _login.L_Email).SingleOrDefault();
-            if (login.L_Email == _login.L_Email && login.L_Password == _login.L_Password)
+            if(login.L_Email== _login.L_Email && login.L_Password == _login.L_Password)
             {
                 Session["adminid"] = login.Login_ID;
                 Session["email"] = login.L_Email;

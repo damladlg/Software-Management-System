@@ -13,7 +13,7 @@ namespace YazilimVarlikYonetimSistemi.Models.Model
         [Key]
         public int D_ID { get; set; }
 
-        [Required, StringLength(50, ErrorMessage = "Can be a maximum of 50 characters!")]
+        [Required, StringLength(50,ErrorMessage = "Can be a maximum of 50 characters!")]
         public string D_Name { get; set; }
 
         [Required, StringLength(100, ErrorMessage = "Can be a maximum of 100 characters!")]

@@ -7,9 +7,9 @@ using YazilimVarlikYonetimSistemi.Models.Model;
 
 namespace YazilimVarlikYonetimSistemi.Models.DataContext
 {
-    public class YazilimVarlikYonetimSistemiContext : DbContext
+    public class YazilimVarlikYonetimSistemiContext:DbContext
     {
-        public YazilimVarlikYonetimSistemiContext() : base("YazilimVarlikYonetimSistemiDB")
+        public YazilimVarlikYonetimSistemiContext():base("YazilimVarlikYonetimSistemi")
         {
 
         }

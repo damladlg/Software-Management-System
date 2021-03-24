@@ -12,11 +12,14 @@ namespace YazilimVarlikYonetimSistemi.Controllers
 {
     public class InfrastructureController : Controller
     {
-        YazilimVarlikYonetimSistemiContext db = new YazilimVarlikYonetimSistemiContext();
+         YazilimVarlikYonetimSistemiContext db = new YazilimVarlikYonetimSistemiContext();
         // GET: Infrastructure
-        public ActionResult Index()
+        public ActionResult Index(Software software)
         {
-            var model = db.Infrastructure.Include(x => x.Software).ToList();
+            var model = db.Infrastructure.Include(x=>x.Software).ToList();
+            //SqlParameter softwareID = new SqlParameter("@id", software.S_ID);
+            //var model = db.Database.SqlQuery<Infrastructure>("SelectInfra").ToList();
+
             return View(model);
         }
 
@@ -24,11 +27,11 @@ namespace YazilimVarlikYonetimSistemi.Controllers
         public ActionResult Create()
         {
             List<SelectListItem> values = (from x in db.Software.ToList()
-                                           select new SelectListItem
-                                           {
-                                               Text = x.S_Name,
-                                               Value = x.S_ID.ToString()
-                                           }).ToList();
+                                          select new SelectListItem
+                                          {
+                                              Text = x.S_Name,
+                                              Value = x.S_ID.ToString()
+                                          }).ToList();
             ViewBag.value = values;
             return View("InfraForm");
         }
