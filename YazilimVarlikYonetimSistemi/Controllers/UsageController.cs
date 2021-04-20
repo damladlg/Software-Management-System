@@ -63,7 +63,7 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                     SqlParameter param7 = new SqlParameter("@DID", usage.Department.D_ID);
                     SqlParameter param8 = new SqlParameter("@SID", usage.Software.S_ID);
 
-                    db.Database.ExecuteSqlCommand("CreateUsage @SoftwareKey, @UsageTime, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param1, param2, param3, param4, param5, param6, param7, param8);
+                    db.Database.ExecuteSqlCommand("stp_CreateUsage @SoftwareKey, @UsageTime, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param1, param2, param3, param4, param5, param6, param7, param8);
                 }
                 else
                 {
@@ -77,7 +77,8 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                     SqlParameter param7 = new SqlParameter("@DID", usage.Department.D_ID);
                     SqlParameter param8 = new SqlParameter("@SID", usage.Software.S_ID);
                     SqlParameter param9 = new SqlParameter("@id", usage.Usage_ID);
-                    db.Database.ExecuteSqlCommand("UpdateUsage @id, @SoftwareKey, @UsageTime, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param9, param1, param2, param3, param4, param5, param6, param7, param8);
+
+                    db.Database.ExecuteSqlCommand("stp_UpdateUsage @id, @SoftwareKey, @UsageTime, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param9, param1, param2, param3, param4, param5, param6, param7, param8);
                 
                 }
                
@@ -123,7 +124,7 @@ namespace YazilimVarlikYonetimSistemi.Controllers
             try
             {
                 SqlParameter param = new SqlParameter("@id", id);
-                db.Database.ExecuteSqlCommand("DeleteUsage @id", param);
+                db.Database.ExecuteSqlCommand("stp_DeleteUsage @id", param);
                 return RedirectToAction("Index");
             }
             catch
