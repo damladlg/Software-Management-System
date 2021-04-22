@@ -54,7 +54,6 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                 if(usage.Usage_ID==0)
                 {
                     SqlParameter param1 = new SqlParameter("@SoftwareKey", usage.Software_Key);
-                    SqlParameter param2 = new SqlParameter("@UsageTime", usage.Usage_Time);
                     SqlParameter param3 = new SqlParameter("@Expirydate", usage.ExpiryDate);
                     SqlParameter param4 = new SqlParameter("@AcquisitionDate", usage.Acquisition_Date);
 
@@ -63,12 +62,11 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                     SqlParameter param7 = new SqlParameter("@DID", usage.Department.D_ID);
                     SqlParameter param8 = new SqlParameter("@SID", usage.Software.S_ID);
 
-                    db.Database.ExecuteSqlCommand("stp_CreateUsage @SoftwareKey, @UsageTime, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param1, param2, param3, param4, param5, param6, param7, param8);
+                    db.Database.ExecuteSqlCommand("stp_CreateUsage @SoftwareKey, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param1, param3, param4, param5, param6, param7, param8);
                 }
                 else
                 {
                     SqlParameter param1 = new SqlParameter("@SoftwareKey", usage.Software_Key);
-                    SqlParameter param2 = new SqlParameter("@UsageTime", usage.Usage_Time);
                     SqlParameter param3 = new SqlParameter("@Expirydate", usage.ExpiryDate);
                     SqlParameter param4 = new SqlParameter("@AcquisitionDate", usage.Acquisition_Date);
 
@@ -78,7 +76,7 @@ namespace YazilimVarlikYonetimSistemi.Controllers
                     SqlParameter param8 = new SqlParameter("@SID", usage.Software.S_ID);
                     SqlParameter param9 = new SqlParameter("@id", usage.Usage_ID);
 
-                    db.Database.ExecuteSqlCommand("stp_UpdateUsage @id, @SoftwareKey, @UsageTime, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param9, param1, param2, param3, param4, param5, param6, param7, param8);
+                    db.Database.ExecuteSqlCommand("stp_UpdateUsage @id, @SoftwareKey, @Expirydate, @AcquisitionDate, @UpdateStartDate, @UpdateFinishDate, @DID, @SID", param9, param1, param3, param4, param5, param6, param7, param8);
                 
                 }
                
